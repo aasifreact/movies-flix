@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import GenreFilter from './components/GenreFilter';
 import MovieList from './components/MovieList';
+import YearFilter from './components/YearFilter';
 import './App.css';
 
 const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
@@ -17,7 +18,7 @@ function App() {
   useEffect(() => {
     fetchMovies();
     fetchGenres();
-  }, [year, selectedGenre]);
+  }, [year, selectedGenre, page]);
 
   const fetchMovies = async () => {
     try {
@@ -45,13 +46,20 @@ function App() {
     setPage(1); // Reset page to 1 whenever genre changes
   };
 
+  const handleYearSelect = (year) => {
+    setYear(year);
+    setPage(1); // Reset page to 1 whenever year changes
+  };
+
   return (
     <div className="App">
       <h1 className='logo'>MovieFlix</h1>
       <GenreFilter genres={genres} selectedGenre={selectedGenre} onSelectGenre={handleGenreSelect} />
+      <YearFilter selectedYear={year} onSelectYear={handleYearSelect} />
       <MovieList movies={movies} />
     </div>
   );
 }
 
 export default App;
+
