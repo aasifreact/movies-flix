@@ -43,8 +43,8 @@
 /* Mobile view */
 @media (max-width: 600px) {
   .movie-list {
-    grid-template-columns: repeat(2, 1fr); /* Two columns in mobile view */
-    gap: 10px; /* Smaller gap for mobile */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .movie-card {

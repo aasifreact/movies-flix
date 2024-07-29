@@ -43,12 +43,12 @@ function App() {
 
   const handleGenreSelect = (genreId) => {
     setSelectedGenre(genreId);
-    setPage(1); // Reset page to 1 whenever genre changes
+    setPage(1);
   };
 
   const handleYearSelect = (year) => {
     setYear(year);
-    setPage(1); // Reset page to 1 whenever year changes
+    setPage(1);
   };
 
   return (
