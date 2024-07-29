@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movies-flix/static/css/main.14248c4b.css",
+    "main.js": "/movies-flix/static/js/main.2ea43e61.js",
+    "index.html": "/movies-flix/index.html",
+    "main.14248c4b.css.map": "/movies-flix/static/css/main.14248c4b.css.map",
+    "main.2ea43e61.js.map": "/movies-flix/static/js/main.2ea43e61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14248c4b.css",
+    "static/js/main.2ea43e61.js"
+  ]
+}
