@@ -1,0 +1,53 @@
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-card h3 {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.movie-card p {
+  font-size: 14px;
+  margin: 10px;
+  color: #ddd;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr); /* Two columns in mobile view */
+    gap: 10px; /* Smaller gap for mobile */
+  }
+
+  .movie-card {
+    width: 100%;
+  }
+}
