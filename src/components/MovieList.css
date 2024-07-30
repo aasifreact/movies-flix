@@ -51,3 +51,54 @@
     width: 100%;
   }
 }
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 20px;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #ff0;
+}
+
+.star.half {
+  position: relative;
+  color: #ff0;
+}
+
+.star.half::before {
+  content: '★';
+  color: #ddd;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 50%;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-card h3 {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.movie-card p {
+  font-size: 14px;
+  margin: 10px;
+  color: #ddd;
+}
