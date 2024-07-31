@@ -1,37 +1,36 @@
 .year-filter {
-    margin: 20px 0;
-    overflow: hidden;
+  margin: 20px 0;
+  overflow: hidden;
 }
-  
-  .year-filter select {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    outline: none;
-    appearance: none;
-    background: none;
-  }
-  
-  .year-filter select::-ms-expand {
-    display: none;
-  }
-  
-  .year-filter select option {
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-  }
-  
-  .year-filter select::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .year-filter select {
-    scrollbar-width: none;
-  }
-  
+
+.year-filter select {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  outline: none;
+  appearance: none;
+  background: none;
+}
+
+.year-filter select::-ms-expand {
+  display: none;
+}
+
+.year-filter select option {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.year-filter select::-webkit-scrollbar {
+  display: none;
+}
+
+.year-filter select {
+  scrollbar-width: none;
+}

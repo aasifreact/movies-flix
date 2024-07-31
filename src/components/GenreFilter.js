@@ -28,7 +28,7 @@ const GenreFilter = ({ genres, selectedGenre, onSelectGenre }) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - genreFilterRef.current.offsetLeft;
-    const walk = (x - startX) * 3;
+    const walk = (x - startX) * 3; // The scroll speed multiplier
     genreFilterRef.current.scrollLeft = scrollLeft - walk;
   };
 

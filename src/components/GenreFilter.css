@@ -2,20 +2,20 @@
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
-  overflow-x: auto;
-  white-space: nowrap;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent tabs from wrapping */
   padding: 10px 0;
-  cursor: grab;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  cursor: grab; /* Change cursor to indicate draggable area */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .genre-filter:active {
-  cursor: grabbing;
+  cursor: grabbing; /* Change cursor when dragging */
 }
 
 .genre-filter::-webkit-scrollbar {
-  display: none;
+  display: none; /* Hide scrollbar in WebKit browsers */
 }
 
 .genre-tab {
@@ -40,15 +40,17 @@
   background-color: #d32f2f;
 }
 
+/* Ensure the genre tabs are fully visible */
 .genre-filter:before,
 .genre-filter:after {
   content: '';
   flex: 0 0 10px;
 }
 
+/* Prevent text selection */
 .genre-filter, .genre-filter * {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  user-select: none; /* Non-prefixed version, currently supported by all modern browsers */
+  -webkit-user-select: none; /* Chrome, Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
