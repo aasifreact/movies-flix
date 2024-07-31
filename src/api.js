@@ -3,8 +3,6 @@ import axios from 'axios';
 const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
 
-console.log('TMDb API Key:', API_KEY);
-
 export const fetchTopMoviesByYear = (year, page = 1, genres = '') => {
   return axios.get(`${BASE_URL}/discover/movie`, {
     params: {

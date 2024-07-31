@@ -33,7 +33,7 @@ function App() {
       );
       const newMovies = response.data.results;
       setMovies(prevMovies => (page === 1 ? newMovies : [...prevMovies, ...newMovies]));
-      setHasMore(newMovies.length > 0); // Check if there are more movies to load
+      setHasMore(newMovies.length > 0);
     } catch (error) {
       console.error('Error fetching movies:', error);
     }
@@ -50,14 +50,14 @@ function App() {
 
   const handleGenreSelect = (genreId) => {
     setSelectedGenre(genreId);
-    setPage(1); // Reset page to 1 whenever genre changes
-    setMovies([]); // Reset movies list
+    setPage(1);
+    setMovies([]);
   };
 
   const handleYearSelect = (year) => {
     setYear(year);
-    setPage(1); // Reset page to 1 whenever year changes
-    setMovies([]); // Reset movies list
+    setPage(1);
+    setMovies([]);
   };
 
   const fetchMoreMovies = () => {

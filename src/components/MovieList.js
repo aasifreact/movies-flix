@@ -1,11 +1,20 @@
 import React from 'react';
+import { useState } from 'react';
+import MovieItem from './MovieItem';
 import '../components/MovieList.css';
 
 const MovieList = ({ movies }) => {
+  
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
+  const handleMovieClick = (movie) => {
+    setSelectedMovie(movie);
+  };
+
   return (
     <div className="movie-list">
       {movies.map(movie => (
-        <div key={movie.id} className="movie-card">
+        <div key={movie.id} onClick={() => handleMovieClick(movie)} className="movie-card">
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
           <h3>{movie.title}</h3>
           <div className="rating">
@@ -18,6 +27,9 @@ const MovieList = ({ movies }) => {
           </div>
         </div>
       ))}
+      {selectedMovie && (
+        <MovieItem movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
+      )}
     </div>
   );
 };
