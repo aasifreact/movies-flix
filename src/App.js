@@ -79,7 +79,10 @@ function App() {
         dataLength={movies.length}
         next={fetchMoreMovies}
         hasMore={hasMore}
-        loader={<h4 className='loader'>Loading...</h4>}
+        loader={
+        <div className="loader-container">
+        <div className='loader'></div>
+        </div>}
         endMessage={<p className='end-message'>No more movies to show</p>}
       >
         <MovieList movies={movies} />
